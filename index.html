@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internshala Trainings - Certificate Verification</title>
+  <meta name="description" content="Verify your Internshala Trainings certificate authenticity online." />
+  <meta property="og:title" content="Internshala Trainings - Certificate Verification" />
+  <meta property="og:site_name" content="Internshala Trainings" />
+  <meta property="og:description" content="Verify your Internshala Trainings certificate authenticity online." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'%3E%3Cpath d='M2 18 C10 16 16 12 20 8' stroke='%23777777' stroke-width='1.2' fill='none'/%3E%3Cpath d='M12 9 L26 2 L19 18 L16 12 Z' fill='%23008BDC'/%3E%3Cpath d='M26 2 L19 18 L16 12 Z' fill='%230077bd'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ================= RESET & BASE ================= */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* ================= HEADER / NAVBAR ================= */
+    .navbar {
+      height: 72px;
+      border-bottom: 1px solid #eeeeee;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10%;
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      height: 100%;
+    }
+
+    .brand-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      margin-right: 14px;
+    }
+
+    .hamburger svg {
+      width: 22px;
+      height: 22px;
+      stroke: #484848;
+      stroke-width: 2;
+    }
+
+    /* Logo styling */
+    .logo {
+      display: inline-flex;
+      text-decoration: none;
+      user-select: none;
+    }
+
+    .logo-wrap {
+      position: relative;
+      display: inline-flex;
+      flex-direction: column;
+      padding-top: 11px;
+    }
+
+    .logo-graphic {
+      position: absolute;
+      top: -3px;
+      left: 66px;
+      width: 65px;
+      height: 26px;
+      pointer-events: none;
+    }
+
+    .logo-text {
+      font-size: 15.5px;
+      letter-spacing: 0.4px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: baseline;
+      white-space: nowrap;
+    }
+
+    .logo-intern {
+      color: #008BDC;
+      font-weight: 700;
+    }
+
+    .logo-shala {
+      color: #4D4D4D;
+      font-weight: 700;
+    }
+
+    .logo-trainings {
+      color: #555555;
+      font-weight: 400;
+      margin-left: 6px;
+    }
+
+    /* Desktop Nav Items */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+      height: 100%;
+    }
+
+    .nav-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #484848;
+      cursor: pointer;
+      height: 100%;
+      user-select: none;
+      transition: color 0.15s ease;
+    }
+
+    .nav-item:hover,
+    .nav-item.active {
+      color: #008BDC;
+    }
+
+    .offer-badge {
+      background-color: #FF8C00;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 5px;
+      border-radius: 3px;
+      letter-spacing: 0.3px;
+      line-height: 1.1;
+    }
+
+    .chevron-down {
+      width: 12px;
+      height: 12px;
+      stroke: #484848;
+      stroke-width: 2;
+      fill: none;
+      transition: transform 0.25s ease, stroke 0.15s ease;
+    }
+
+    .nav-item:hover .chevron-down,
+    .nav-item.active .chevron-down {
+      stroke: #008BDC;
+    }
+
+    .nav-item.active .chevron-down {
+      transform: rotate(180deg);
+    }
+
+    /* Login Button */
+    .login-btn {
+      border: 1px solid #008BDC;
+      color: #008BDC;
+      background: transparent;
+      border-radius: 4px;
+      padding: 7px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #f0f9ff;
+    }
+
+    /* ================= DESKTOP DROPDOWNS ================= */
+    .desktop-dropdown {
+      position: absolute;
+      top: 72px;
+      left: 0;
+      background: #ffffff;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      border: 1px solid #eeeeee;
+      border-radius: 6px;
+      z-index: 1100;
+      display: none;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+
+    .nav-item.active .desktop-dropdown {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    /* Mega Dropdown for Certification Courses */
+    .mega-menu {
+      width: 590px;
+      height: 380px;
+      border-radius: 6px;
+      overflow: hidden;
+      flex-direction: row;
+    }
+
+    .mega-sidebar {
+      width: 220px;
+      background: #f8f9fa;
+      border-right: 1px solid #eeeeee;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0;
+    }
+
+    .mega-cat-item {
+      padding: 11px 18px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #484848;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.15s ease;
+      border-left: 3px solid transparent;
+    }
+
+    .mega-cat-item:hover,
+    .mega-cat-item.active {
+      background: #ffffff;
+      color: #008BDC;
+      font-weight: 600;
+      border-left: 3px solid #008BDC;
+    }
+
+    .mega-cat-item .cat-arrow {
+      font-size: 11px;
+      color: #888888;
+    }
+
+    .mega-cat-item.active .cat-arrow {
+      color: #008BDC;
+    }
+
+    .mega-content {
+      flex: 1;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      background: #ffffff;
+    }
+
+    .mega-banner {
+      background: #FFF3E0;
+      border: 1px solid #FFE0B2;
+      border-radius: 4px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .mega-banner-tag {
+      background: #FF8C00;
+      color: #ffffff;
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 2px 5px;
+      border-radius: 2px;
+      letter-spacing: 0.3px;
+    }
+
+    .mega-banner-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: #E65100;
+    }
+
+    .mega-course-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .mega-course-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 10px;
+      border-radius: 4px;
+      font-size: 13.5px;
+      color: #333333;
+      text-decoration: none;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .mega-course-link:hover {
+      background-color: #f7faff;
+      color: #008BDC;
+    }
+
+    .mega-course-tag {
+      font-size: 11px;
+      font-weight: 600;
+      color: #008BDC;
+      background: #eef7fc;
+      padding: 2px 7px;
+      border-radius: 3px;
+      flex-shrink: 0;
+      margin-left: 8px;
+    }
+
+    .mega-footer-link {
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid #f0f0f0;
+      font-size: 13px;
+      font-weight: 600;
+      color: #008BDC;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .mega-footer-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Placement Courses Dropdown */
+    .placement-menu {
+      width: 400px;
+      padding: 16px;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .placement-item {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 12px;
+      border-radius: 5px;
+      border: 1px solid #f0f0f0;
+      transition: all 0.15s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .placement-item:hover {
+      border-color: #bce1fa;
+      background-color: #f8fcff;
+    }
+
+    .placement-item-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .placement-item-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333333;
+    }
+
+    .placement-item:hover .placement-item-title {
+      color: #008BDC;
+    }
+
+    .placement-badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
+    .placement-badge.guarantee {
+      background: #E8F5E9;
+      color: #2E7D32;
+      border: 1px solid #C8E6C9;
+    }
+
+    .placement-badge.assistance {
+      background: #E3F2FD;
+      color: #1565C0;
+      border: 1px solid #BBDEFB;
+    }
+
+    .placement-item-sub {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #777777;
+    }
+
+    .placement-menu-footer {
+      background: #F1F8FD;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #008BDC;
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    /* ================= MAIN CONTENT ================= */
+    .main-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 20px 64px;
+      width: 100%;
+    }
+
+    .page-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #333333;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .verify-form {
+      width: 100%;
+      max-width: 390px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    .cert-input {
+      width: 100%;
+      height: 42px;
+      padding: 8px 14px;
+      font-size: 14px;
+      font-family: inherit;
+      color: #484848;
+      background-color: #ffffff;
+      border: 1px solid #dddddd;
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .cert-input::placeholder {
+      color: #999999;
+    }
+
+    .cert-input:focus,
+    .cert-input.active-border {
+      border-color: #008BDC;
+    }
+
+    .cert-input.input-error {
+      border-color: #d9534f !important;
+      box-shadow: 0 0 0 1px rgba(217, 83, 79, 0.2);
+    }
+
+    /* Inline Validation Message */
+    .inline-error {
+      display: none;
+      color: #d9534f;
+      font-size: 13px;
+      margin-top: 6px;
+      text-align: left;
+      line-height: 1.4;
+    }
+
+    .inline-error.show {
+      display: block;
+    }
+
+    .verify-btn {
+      width: 100%;
+      height: 42px;
+      margin-top: 20px;
+      background-color: #008BDC;
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .verify-btn:hover {
+      background-color: #0077bd;
+    }
+
+    .verify-btn:active {
+      background-color: #0066a3;
+    }
+
+    /* Invalid Certificate Error Alert Box */
+    .error-alert {
+      display: none;
+      max-width: 580px;
+      width: 100%;
+      margin: 32px auto 0;
+      background: #fdf2f2;
+      border: 1px solid #f5c6cb;
+      color: #a94442;
+      padding: 14px 18px;
+      border-radius: 4px;
+      font-size: 14.5px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-sizing: border-box;
+      animation: fadeIn 0.25s ease;
+    }
+
+    .error-alert.show {
+      display: flex;
+    }
+
+    .error-icon {
+      width: 18px;
+      height: 18px;
+      stroke: #a94442;
+      stroke-width: 2;
+      fill: none;
+      flex-shrink: 0;
+    }
+
+    /* Result Details Block */
+    .result-container {
+      width: 100%;
+      max-width: 580px;
+      margin: 36px auto 0;
+      display: none;
+      animation: fadeIn 0.25s ease;
+    }
+
+    .result-container.visible {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(4px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .result-row {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 18px;
+      font-size: 15px;
+      line-height: 1.45;
+      color: #333333;
+      font-weight: 400;
+      width: 100%;
+    }
+
+    .result-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .result-label {
+      width: 195px;
+      flex-shrink: 0;
+      color: #333333;
+    }
+
+    .result-value {
+      flex: 1;
+      min-width: 0;
+      color: #333333;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    /* ================= FOOTER ================= */
+    .footer {
+      background-color: #212121;
+      color: #ffffff;
+      padding: 44px 10%;
+      margin-top: auto;
+      width: 100%;
+    }
+
+    .footer-section {
+      border-bottom: 1px solid #363636;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+
+    .footer-section:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .footer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      cursor: default;
+    }
+
+    .footer-section:last-child .footer-header {
+      margin-bottom: 0;
+    }
+
+    .footer-heading {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .accordion-icon {
+      display: none;
+      font-size: 20px;
+      font-weight: 400;
+      color: #dddddd;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .footer-links {
+      font-size: 13px;
+      line-height: 2.1;
+      color: #dddddd;
+    }
+
+    .footer-links a {
+      color: #dddddd;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .pipe {
+      color: #555555;
+      margin: 0 10px;
+    }
+
+    .view-more-row {
+      margin-top: 4px;
+    }
+
+    .view-more-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #dddddd;
+      font-size: 13px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .view-more-link svg {
+      width: 11px;
+      height: 11px;
+      stroke: #dddddd;
+      stroke-width: 2;
+      fill: none;
+      transition: transform 0.2s ease;
+    }
+
+    /* ================= MOBILE SLIDE-OUT DRAWER (< 992px) ================= */
+    .drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .drawer-backdrop.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 290px;
+      height: 100vh;
+      background: #ffffff;
+      z-index: 2000;
+      transform: translateX(-100%);
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 2px 0 16px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .mobile-drawer.open {
+      transform: translateX(0);
+    }
+
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .drawer-close-btn {
+      font-size: 26px;
+      line-height: 1;
+      color: #666666;
+      cursor: pointer;
+      padding: 2px 6px;
+    }
+
+    .drawer-body {
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .drawer-acc-item {
+      border-bottom: 1px solid #f0f0f0;
+      padding-bottom: 10px;
+    }
+
+    .drawer-acc-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 8px 0;
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #333333;
+      text-align: left;
+    }
+
+    .drawer-acc-icon {
+      font-size: 18px;
+      color: #777777;
+      transition: transform 0.2s ease;
+    }
+
+    .drawer-acc-item.open .drawer-acc-icon {
+      transform: rotate(45deg);
+    }
+
+    .drawer-acc-content {
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+      padding: 8px 0 6px 10px;
+    }
+
+    .drawer-acc-item.open .drawer-acc-content {
+      display: flex;
+    }
+
+    .drawer-sublink {
+      font-size: 13.5px;
+      color: #555555;
+      padding: 4px 0;
+      text-decoration: none;
+    }
+
+    .drawer-sublink:hover {
+      color: #008BDC;
+    }
+
+    .drawer-quick-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: #484848;
+      padding: 10px 0;
+      display: block;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .drawer-quick-link:hover {
+      color: #008BDC;
+    }
+
+    .drawer-footer {
+      padding: 20px;
+      border-top: 1px solid #eeeeee;
+      margin-top: auto;
+    }
+
+    .drawer-login-btn {
+      width: 100%;
+      height: 42px;
+      border: 1px solid #008BDC;
+      color: #008BDC;
+      font-size: 14.5px;
+      font-weight: 600;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.15s ease;
+    }
+
+    .drawer-login-btn:hover {
+      background-color: #f0f9ff;
+    }
+
+    /* ================= LOGIN MODAL ================= */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(2px);
+      z-index: 3000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+      padding: 20px;
+    }
+
+    .modal-backdrop.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .login-modal {
+      width: 100%;
+      max-width: 400px;
+      background: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+      padding: 28px;
+      position: relative;
+      transform: scale(0.95);
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .modal-backdrop.open .login-modal {
+      transform: scale(1);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      font-size: 24px;
+      line-height: 1;
+      color: #888888;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .modal-close-btn:hover {
+      color: #333333;
+    }
+
+    .modal-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #333333;
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .btn-google {
+      width: 100%;
+      height: 42px;
+      border: 1px solid #dcdcdc;
+      border-radius: 4px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #484848;
+      cursor: pointer;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .btn-google:hover {
+      background-color: #f8f9fa;
+      border-color: #c8c8c8;
+    }
+
+    .google-icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    .modal-divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 18px 0;
+      color: #888888;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .modal-divider::before,
+    .modal-divider::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .modal-divider span {
+      padding: 0 10px;
+    }
+
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      text-align: left;
+    }
+
+    .form-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #484848;
+    }
+
+    .modal-input {
+      width: 100%;
+      height: 40px;
+      padding: 8px 12px;
+      font-size: 14px;
+      font-family: inherit;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+
+    .modal-input:focus {
+      border-color: #008BDC;
+      box-shadow: 0 0 0 1px rgba(0, 139, 220, 0.2);
+    }
+
+    .forgot-link-wrap {
+      text-align: right;
+      margin-top: -6px;
+    }
+
+    .forgot-link {
+      font-size: 12.5px;
+      color: #008BDC;
+      text-decoration: none;
+    }
+
+    .forgot-link:hover {
+      text-decoration: underline;
+    }
+
+    .modal-login-btn {
+      width: 100%;
+      height: 42px;
+      background: #008BDC;
+      color: #ffffff;
+      font-size: 14.5px;
+      font-weight: 600;
+      border-radius: 4px;
+      margin-top: 6px;
+      cursor: pointer;
+      transition: background-color 0.15s ease;
+    }
+
+    .modal-login-btn:hover {
+      background: #0077bd;
+    }
+
+    .modal-footer {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 13px;
+      color: #666666;
+    }
+
+    .modal-footer a {
+      color: #008BDC;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .modal-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ================= RESPONSIVE (< 992px) ================= */
+    @media (max-width: 991px) {
+      .navbar {
+        padding: 0 20px;
+      }
+
+      .hamburger {
+        display: inline-flex;
+      }
+
+      .nav-links,
+      .login-btn {
+        display: none;
+      }
+
+      .footer {
+        padding: 28px 20px;
+      }
+
+      .footer-section {
+        padding-bottom: 18px;
+        margin-bottom: 18px;
+      }
+
+      .footer-header {
+        margin-bottom: 0;
+        cursor: pointer;
+      }
+
+      .accordion-icon {
+        display: inline-block;
+      }
+
+      .footer-links {
+        display: none;
+        margin-top: 14px;
+      }
+
+      .footer-section.open .footer-links {
+        display: block;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .result-label {
+        width: 155px;
+      }
+      .result-row {
+        font-size: 14.5px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .result-label {
+        width: 140px;
+      }
+      .result-row {
+        font-size: 13.5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header class="navbar" id="mainNavbar">
+    <div class="nav-left">
+      <div class="brand-wrapper">
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <a href="index.html" class="logo" title="Internshala Trainings">
+          <div class="logo-wrap">
+            <svg class="logo-graphic" viewBox="0 0 65 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Curved grey motion trail sweeping from above 'S' up to tail of plane -->
+              <path d="M 3 21 C 15 20, 28 16, 38 11.5" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+              <!-- Blue paper plane angled upward to top-right above 'HA' and 'LA' -->
+              <g transform="translate(37, 1) rotate(5)">
+                <path d="M 1 10.5 L 22.5 1.5 L 13.5 17 L 10 11.5 L 1 10.5 Z" fill="#008BDC"/>
+                <path d="M 22.5 1.5 L 13.5 17 L 10 11.5 L 22.5 1.5 Z" fill="#0077bd"/>
+                <path d="M 10 11.5 L 14.5 13.5 L 13.5 17 L 10 11.5 Z" fill="#005e96"/>
+              </g>
+            </svg>
+            <div class="logo-text">
+              <span class="logo-intern">INTERN</span><span class="logo-shala">SHALA</span><span class="logo-trainings">TRAININGS</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <ul class="nav-links">
+        <!-- Certification Courses Mega Dropdown Item -->
+        <li class="nav-item" id="navCertCourses">
+          <span>Certification Courses</span>
+          <span class="offer-badge">OFFER</span>
+          <svg class="chevron-down" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+
+          <!-- Floating Mega Menu -->
+          <div class="desktop-dropdown mega-menu" id="certMegaDropdown">
+            <!-- Left Sidebar Categories -->
+            <div class="mega-sidebar" id="megaSidebar">
+              <div class="mega-cat-item active" data-cat="ai">
+                <span>Popular with AI 🔥</span>
+                <span class="cat-arrow">&#8250;</span>
+              </div>
+              <div class="mega-cat-item" data-cat="programming">
+                <span>Programming</span>
+                <span class="cat-arrow">&#8250;</span>
+              </div>
+              <div class="mega-cat-item" data-cat="datascience">
+                <span>Data Science &amp; AI</span>
+                <span class="cat-arrow">&#8250;</span>
+              </div>
+              <div class="mega-cat-item" data-cat="business">
+                <span>Business &amp; Management</span>
+                <span class="cat-arrow">&#8250;</span>
+              </div>
+              <div class="mega-cat-item" data-cat="engineering">
+                <span>Core Engineering</span>
+                <span class="cat-arrow">&#8250;</span>
+              </div>
+            </div>
+
+            <!-- Right Content Course List -->
+            <div class="mega-content">
+              <div class="mega-banner">
+                <span class="mega-banner-tag">OFFER</span>
+                <span class="mega-banner-text">FLAT 55% + 10% OFF on all Certification Courses!</span>
+              </div>
+
+              <ul class="mega-course-list" id="megaCourseList">
+                <!-- Dynamically populated based on active category -->
+              </ul>
+
+              <a href="#" class="mega-footer-link">
+                <span>View all 80+ Certification Courses</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Placement Courses Dropdown Item -->
+        <li class="nav-item" id="navPlacementCourses">
+          <span>Placement Courses</span>
+          <svg class="chevron-down" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+
+          <!-- Floating Placement Card Dropdown -->
+          <div class="desktop-dropdown placement-menu" id="placementDropdown">
+            <a href="#" class="placement-item">
+              <div class="placement-item-top">
+                <span class="placement-item-title">Full Stack Development Course</span>
+                <span class="placement-badge guarantee">Guaranteed Placement</span>
+              </div>
+              <div class="placement-item-sub">
+                <span>Duration: 4 Months</span>
+                <span style="color: #2E7D32; font-weight: 600;">Avg. CTC: ₹4.5 - ₹12 LPA</span>
+              </div>
+            </a>
+
+            <a href="#" class="placement-item">
+              <div class="placement-item-top">
+                <span class="placement-item-title">Data Science Placement Course</span>
+                <span class="placement-badge guarantee">Guaranteed Placement</span>
+              </div>
+              <div class="placement-item-sub">
+                <span>Duration: 4 Months</span>
+                <span style="color: #2E7D32; font-weight: 600;">Avg. CTC: ₹5.0 - ₹14 LPA</span>
+              </div>
+            </a>
+
+            <a href="#" class="placement-item">
+              <div class="placement-item-top">
+                <span class="placement-item-title">UI/UX Design Placement Course</span>
+                <span class="placement-badge assistance">Placement Assistance</span>
+              </div>
+              <div class="placement-item-sub">
+                <span>Duration: 4 Months</span>
+                <span style="color: #1565C0; font-weight: 600;">Avg. CTC: ₹4.0 - ₹9 LPA</span>
+              </div>
+            </a>
+
+            <a href="#" class="placement-item">
+              <div class="placement-item-top">
+                <span class="placement-item-title">Digital Marketing Placement Course</span>
+                <span class="placement-badge assistance">Placement Assistance</span>
+              </div>
+              <div class="placement-item-sub">
+                <span>Duration: 3 Months</span>
+                <span style="color: #1565C0; font-weight: 600;">Avg. CTC: ₹3.5 - ₹8 LPA</span>
+              </div>
+            </a>
+
+            <div class="placement-menu-footer">
+              100% Placement Guarantee or 100% Refund*
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <button class="login-btn" id="headerLoginBtn">Login</button>
+  </header>
+
+  <!-- ================= MOBILE DRAWER & BACKDROP ================= -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="brand-wrapper">
+        <a href="index.html" class="logo" title="Internshala Trainings">
+          <div class="logo-wrap">
+            <svg class="logo-graphic" viewBox="0 0 65 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 3 21 C 15 20, 28 16, 38 11.5" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+              <g transform="translate(37, 1) rotate(5)">
+                <path d="M 1 10.5 L 22.5 1.5 L 13.5 17 L 10 11.5 L 1 10.5 Z" fill="#008BDC"/>
+                <path d="M 22.5 1.5 L 13.5 17 L 10 11.5 L 22.5 1.5 Z" fill="#0077bd"/>
+                <path d="M 10 11.5 L 14.5 13.5 L 13.5 17 L 10 11.5 Z" fill="#005e96"/>
+              </g>
+            </svg>
+            <div class="logo-text">
+              <span class="logo-intern">INTERN</span><span class="logo-shala">SHALA</span><span class="logo-trainings">TRAININGS</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn">&times;</button>
+    </div>
+
+    <div class="drawer-body">
+      <!-- Drawer Accordion 1: Certification Courses -->
+      <div class="drawer-acc-item" id="drawerAccCert">
+        <button class="drawer-acc-header" onclick="toggleDrawerAcc('drawerAccCert')">
+          <span>Certification Courses <span class="offer-badge" style="margin-left: 4px;">OFFER</span></span>
+          <span class="drawer-acc-icon">+</span>
+        </button>
+        <div class="drawer-acc-content">
+          <a href="#" class="drawer-sublink">Data Science with AI (6 Weeks)</a>
+          <a href="#" class="drawer-sublink">Full Stack Web Development with AI</a>
+          <a href="#" class="drawer-sublink">Machine Learning with AI</a>
+          <a href="#" class="drawer-sublink">Generative AI &amp; LLMs</a>
+          <a href="#" class="drawer-sublink">Python Programming with AI</a>
+          <a href="#" class="drawer-sublink" style="color: #008BDC; font-weight: 600;">View All 80+ Courses &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Drawer Accordion 2: Placement Courses -->
+      <div class="drawer-acc-item" id="drawerAccPlacement">
+        <button class="drawer-acc-header" onclick="toggleDrawerAcc('drawerAccPlacement')">
+          <span>Placement Courses</span>
+          <span class="drawer-acc-icon">+</span>
+        </button>
+        <div class="drawer-acc-content">
+          <a href="#" class="drawer-sublink">Full Stack Development Course (Guaranteed)</a>
+          <a href="#" class="drawer-sublink">Data Science Placement Course (Guaranteed)</a>
+          <a href="#" class="drawer-sublink">UI/UX Design Placement Course</a>
+          <a href="#" class="drawer-sublink">Digital Marketing Placement Course</a>
+        </div>
+      </div>
+
+      <!-- Quick links -->
+      <a href="index.html" class="drawer-quick-link" style="color: #008BDC; font-weight: 600;">Certificate Verification</a>
+      <a href="#" class="drawer-quick-link">About Internshala Trainings</a>
+      <a href="#" class="drawer-quick-link">Contact Us</a>
+    </div>
+
+    <div class="drawer-footer">
+      <button class="drawer-login-btn" id="drawerLoginBtn">Login</button>
+    </div>
+  </aside>
+
+  <!-- ================= LOGIN MODAL ================= -->
+  <div class="modal-backdrop" id="loginModalBackdrop">
+    <div class="login-modal" id="loginModal">
+      <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+      <h2 class="modal-title">Login to Internshala</h2>
+
+      <!-- Continue with Google Button -->
+      <button type="button" class="btn-google" id="btnGoogleLogin">
+        <svg class="google-icon" viewBox="0 0 24 24">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+        </svg>
+        <span>Continue with Google</span>
+      </button>
+
+      <div class="modal-divider">
+        <span>OR</span>
+      </div>
+
+      <form class="modal-form" id="loginForm" onsubmit="event.preventDefault(); alert('Logged in successfully!'); closeLoginModal();">
+        <div class="form-group">
+          <label class="form-label" for="modalEmail">Email</label>
+          <input type="email" id="modalEmail" class="modal-input" placeholder="john@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modalPassword">Password</label>
+          <input type="password" id="modalPassword" class="modal-input" placeholder="Must be at least 6 characters" required minlength="6" />
+        </div>
+
+        <div class="forgot-link-wrap">
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="modal-login-btn">Login</button>
+      </form>
+
+      <div class="modal-footer">
+        <span>New to Internshala? <a href="#">Register</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN CONTENT AREA ================= -->
+  <main class="main-container">
+    <h1 class="page-title">Certificate Verification</h1>
+
+    <form class="verify-form" id="verifyForm" novalidate>
+      <div class="input-wrapper">
+        <input
+          type="text"
+          id="certInput"
+          class="cert-input"
+          placeholder="Enter certificate number"
+          value=""
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <!-- Inline validation error message -->
+        <div class="inline-error" id="inlineError">Please enter a valid certificate number.</div>
+      </div>
+      <button type="submit" class="verify-btn" id="verifyBtn">Verify</button>
+    </form>
+
+    <!-- Official Internshala-style Error Alert Box -->
+    <div class="error-alert" id="errorAlert">
+      <svg class="error-icon" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="8" x2="12" y2="12"></line>
+        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+      </svg>
+      <span>Invalid certificate number. Please check the certificate number and try again.</span>
+    </div>
+
+    <!-- Verification Result Details -->
+    <div class="result-container" id="resultContainer">
+      <div class="result-row">
+        <div class="result-label">Name:</div>
+        <div class="result-value" id="valName"></div>
+      </div>
+      <div class="result-row">
+        <div class="result-label">Training name:</div>
+        <div class="result-value" id="valTraining"></div>
+      </div>
+      <div class="result-row">
+        <div class="result-label">College name:</div>
+        <div class="result-value" id="valCollege"></div>
+      </div>
+      <div class="result-row">
+        <div class="result-label">Final Test Score:</div>
+        <div class="result-value" id="valScore"></div>
+      </div>
+      <div class="result-row">
+        <div class="result-label">Date of certification:</div>
+        <div class="result-value" id="valDate"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <!-- Section 1: Top AI Courses -->
+    <div class="footer-section">
+      <div class="footer-header" onclick="toggleAccordion(this)">
+        <h3 class="footer-heading">Top AI Courses</h3>
+        <span class="accordion-icon">+</span>
+      </div>
+      <div class="footer-links">
+        <div>
+          <a href="#">Claude Code Course</a><span class="pipe">|</span>
+          <a href="#">Agentic AI Course</a><span class="pipe">|</span>
+          <a href="#">Forward Deployed Engineer Course</a><span class="pipe">|</span>
+          <a href="#">AI Product Manager Course</a><span class="pipe">|</span>
+          <a href="#">Generative AI Course</a><span class="pipe">|</span>
+          <a href="#">Prompt Engineering for GenAI Course</a>
+        </div>
+        <div>
+          <span class="pipe" style="margin-left: 0;">|</span>
+          <a href="#">Vibe Coding with Replit Course</a><span class="pipe">|</span>
+          <a href="#">Artificial Intelligence &amp; Machine Learning Course</a><span class="pipe">|</span>
+          <a href="#">AI in Digital Marketing Course</a><span class="pipe">|</span>
+          <a href="#">AI in Data Science Course</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Programming -->
+    <div class="footer-section">
+      <div class="footer-header" onclick="toggleAccordion(this)">
+        <h3 class="footer-heading">Programming</h3>
+        <span class="accordion-icon">+</span>
+      </div>
+      <div class="footer-links">
+        <div>
+          <a href="#">Claude Code Course</a><span class="pipe">|</span>
+          <a href="#">Agentic AI Course</a><span class="pipe">|</span>
+          <a href="#">Forward Deployed Engineer Course</a><span class="pipe">|</span>
+          <a href="#">Full Stack Web Development with AI Course</a><span class="pipe">|</span>
+          <a href="#">Programming in Python with AI Course</a><span class="pipe">|</span>
+        </div>
+        <div>
+          <a href="#">Programming in C and C++ with AI Course</a><span class="pipe">|</span>
+          <a href="#">Core Java with AI Course</a><span class="pipe">|</span>
+          <a href="#">Android App Development with AI Course</a><span class="pipe">|</span>
+          <a href="#">Cyber Security with AI Course</a><span class="pipe">|</span>
+          <a href="#">React with AI Course</a><span class="pipe">|</span>
+        </div>
+        <div class="view-more-row">
+          <a href="#" class="view-more-link" onclick="event.preventDefault();">
+            <span>View More</span>
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Business & Management -->
+    <div class="footer-section">
+      <div class="footer-header" onclick="toggleAccordion(this)">
+        <h3 class="footer-heading">Business &amp; Management</h3>
+        <span class="accordion-icon">+</span>
+      </div>
+      <div class="footer-links">
+        <div>
+          <a href="#">Digital Marketing with AI Course</a><span class="pipe">|</span>
+          <a href="#">Advanced Excel with AI Course</a><span class="pipe">|</span>
+          <a href="#">Financial Modeling and Valuation Course</a><span class="pipe">|</span>
+          <a href="#">Business Analytics Course</a><span class="pipe">|</span>
+          <a href="#">Human Resource Management Course</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    // ================= CERTIFICATE DATABASE =================
+    const CERTIFICATE_DATABASE = {
+      'zngxe6kk77e46d1ik': {
+        name: 'Mr. PRANJAL RAJPOOT',
+        training: 'Data Science with AI',
+        college: 'Maulana Azad National Institute of Technology',
+        score: '91%',
+        date: '2026-07-17'
+      },
+      'qrtxe6kk87e6d1l': {
+        name: 'Ms. NAMRATA SAGAR',
+        training: 'Data Science with AI',
+        college: 'Maulana Azad National Institute of Technology',
+        score: '87%',
+        date: '2026-07-15'
+      }
+    };
+
+    // DOM Elements
+    const verifyForm = document.getElementById('verifyForm');
+    const certInput = document.getElementById('certInput');
+    const inlineError = document.getElementById('inlineError');
+    const errorAlert = document.getElementById('errorAlert');
+    const resultContainer = document.getElementById('resultContainer');
+
+    const valName = document.getElementById('valName');
+    const valTraining = document.getElementById('valTraining');
+    const valCollege = document.getElementById('valCollege');
+    const valScore = document.getElementById('valScore');
+    const valDate = document.getElementById('valDate');
+
+    // Reset error states when user types
+    certInput.addEventListener('input', () => {
+      inlineError.classList.remove('show');
+      certInput.classList.remove('input-error');
+      errorAlert.classList.remove('show');
+
+      if (certInput.value.trim().length > 0) {
+        certInput.classList.add('active-border');
+      } else {
+        certInput.classList.remove('active-border');
+        resultContainer.classList.remove('visible');
+      }
+    });
+
+    // Verification Logic function
+    function verifyCertificate(code) {
+      const trimmed = (code || '').trim().toLowerCase();
+
+      // Clear previous displays
+      inlineError.classList.remove('show');
+      certInput.classList.remove('input-error');
+      errorAlert.classList.remove('show');
+      resultContainer.classList.remove('visible');
+
+      // 1. Empty input validation
+      if (!trimmed) {
+        inlineError.classList.add('show');
+        certInput.classList.add('input-error');
+        certInput.focus();
+        return;
+      }
+
+      // 2. Check Database for valid certificate
+      if (CERTIFICATE_DATABASE.hasOwnProperty(trimmed)) {
+        const cert = CERTIFICATE_DATABASE[trimmed];
+        valName.textContent = cert.name;
+        valTraining.textContent = cert.training;
+        valCollege.textContent = cert.college;
+        valScore.textContent = cert.score;
+        valDate.textContent = cert.date;
+
+        certInput.classList.add('active-border');
+        resultContainer.classList.add('visible');
+
+        // Smoothly update browser address bar without reload
+        try {
+          if (window.history && window.history.replaceState) {
+            window.history.replaceState(null, '', '/verify_certificate?certificate_number=' + encodeURIComponent(trimmed));
+          }
+        } catch (err) {
+          // Ignore any sandbox/file protocol restrictions
+        }
+      } else {
+        // 3. Invalid ID Alert Box
+        errorAlert.classList.add('show');
+      }
+    }
+
+    // Form submit listener
+    verifyForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      verifyCertificate(certInput.value);
+    });
+
+    // Auto-Verification Support from Query Parameters & Clean URL Paths
+    window.addEventListener('DOMContentLoaded', () => {
+      let targetId = '';
+
+      // a) Query parameters: ?certificate_number=<id> or ?id=<id>
+      const urlParams = new URLSearchParams(window.location.search);
+      targetId = urlParams.get('certificate_number') || urlParams.get('id') || urlParams.get('certificate_id') || urlParams.get('cert');
+
+      // b) Clean URL paths: /verify_certificate/<id> (or /<id> on web servers)
+      if (!targetId) {
+        const cleanPath = window.location.pathname.replace(/\/+$/, '');
+        const match = cleanPath.match(/\/verify_certificate\/([^/]+)$/i);
+        if (match) {
+          targetId = decodeURIComponent(match[1]);
+        } else if (window.location.protocol.startsWith('http')) {
+          const segments = cleanPath.split('/').filter(s => s && s !== 'verify_certificate' && s !== 'index.html');
+          if (segments.length === 1) {
+            targetId = decodeURIComponent(segments[0]);
+          }
+        }
+      }
+
+      if (targetId && targetId.trim()) {
+        certInput.value = targetId.trim();
+        verifyCertificate(targetId.trim());
+      }
+    });
+
+    // ================= HEADER DROPDOWNS LOGIC =================
+    const navCertCourses = document.getElementById('navCertCourses');
+    const navPlacementCourses = document.getElementById('navPlacementCourses');
+    const megaSidebar = document.getElementById('megaSidebar');
+    const megaCourseList = document.getElementById('megaCourseList');
+
+    // Mega Menu Course Database
+    const MEGA_COURSES = {
+      ai: [
+        { name: "Data Science with AI", duration: "6 Weeks", tag: "HOT" },
+        { name: "Full Stack Web Development with AI", duration: "8 Weeks", tag: "POPULAR" },
+        { name: "Machine Learning with AI", duration: "6 Weeks" },
+        { name: "Generative AI & LLMs Course", duration: "4 Weeks", tag: "NEW" },
+        { name: "Prompt Engineering for GenAI", duration: "4 Weeks" },
+        { name: "AI in Digital Marketing", duration: "4 Weeks" }
+      ],
+      programming: [
+        { name: "Full Stack Web Development with AI", duration: "8 Weeks", tag: "POPULAR" },
+        { name: "Python Programming with AI", duration: "6 Weeks" },
+        { name: "Core Java with AI Course", duration: "6 Weeks" },
+        { name: "Programming in C and C++ with AI", duration: "6 Weeks" },
+        { name: "Android App Development with AI", duration: "8 Weeks" },
+        { name: "React with AI Course", duration: "6 Weeks" }
+      ],
+      datascience: [
+        { name: "Data Science with AI", duration: "6 Weeks", tag: "HOT" },
+        { name: "Machine Learning Course", duration: "6 Weeks" },
+        { name: "Deep Learning & Neural Networks", duration: "6 Weeks" },
+        { name: "Data Analytics with AI", duration: "6 Weeks" },
+        { name: "Power BI & Tableau Course", duration: "4 Weeks" },
+        { name: "Artificial Intelligence Course", duration: "8 Weeks" }
+      ],
+      business: [
+        { name: "Digital Marketing with AI", duration: "6 Weeks", tag: "POPULAR" },
+        { name: "Advanced Excel with AI", duration: "4 Weeks" },
+        { name: "Financial Modeling & Valuation", duration: "6 Weeks" },
+        { name: "Product Management Course", duration: "6 Weeks", tag: "NEW" },
+        { name: "Business Analytics Course", duration: "6 Weeks" },
+        { name: "Human Resource Management", duration: "4 Weeks" }
+      ],
+      engineering: [
+        { name: "AutoCAD 2D & 3D Course", duration: "6 Weeks", tag: "POPULAR" },
+        { name: "Electric Vehicle Technology", duration: "6 Weeks", tag: "NEW" },
+        { name: "Embedded Systems & IoT", duration: "6 Weeks" },
+        { name: "SolidWorks Design Course", duration: "6 Weeks" },
+        { name: "MATLAB Programming", duration: "4 Weeks" },
+        { name: "VLSI Design Course", duration: "6 Weeks" }
+      ]
+    };
+
+    function renderMegaCourses(categoryKey) {
+      const courses = MEGA_COURSES[categoryKey] || MEGA_COURSES.ai;
+      megaCourseList.innerHTML = courses.map(course => `
+        <li>
+          <a href="#" class="mega-course-link" onclick="event.preventDefault();">
+            <span>${course.name}</span>
+            <span class="mega-course-tag">${course.duration}</span>
+          </a>
+        </li>
+      `).join('');
+    }
+
+    // Initialize with AI courses
+    renderMegaCourses('ai');
+
+    // Sidebar Category hover/click handler
+    megaSidebar.querySelectorAll('.mega-cat-item').forEach(item => {
+      const handleSelect = () => {
+        megaSidebar.querySelectorAll('.mega-cat-item').forEach(el => el.classList.remove('active'));
+        item.classList.add('active');
+        renderMegaCourses(item.getAttribute('data-cat'));
+      };
+      item.addEventListener('mouseenter', handleSelect);
+      item.addEventListener('click', handleSelect);
+    });
+
+    // Dropdown toggles (Click & Hover support)
+    function closeAllDropdowns() {
+      navCertCourses.classList.remove('active');
+      navPlacementCourses.classList.remove('active');
+    }
+
+    navCertCourses.addEventListener('click', (e) => {
+      // Avoid closing if clicking inside dropdown content
+      if (e.target.closest('.desktop-dropdown')) return;
+      const isOpen = navCertCourses.classList.contains('active');
+      closeAllDropdowns();
+      if (!isOpen) navCertCourses.classList.add('active');
+    });
+
+    navPlacementCourses.addEventListener('click', (e) => {
+      if (e.target.closest('.desktop-dropdown')) return;
+      const isOpen = navPlacementCourses.classList.contains('active');
+      closeAllDropdowns();
+      if (!isOpen) navPlacementCourses.classList.add('active');
+    });
+
+    // Hover intent for desktop
+    let hoverTimeout;
+    [navCertCourses, navPlacementCourses].forEach(navItem => {
+      navItem.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 992) {
+          clearTimeout(hoverTimeout);
+          closeAllDropdowns();
+          navItem.classList.add('active');
+        }
+      });
+      navItem.addEventListener('mouseleave', () => {
+        if (window.innerWidth >= 992) {
+          hoverTimeout = setTimeout(() => {
+            navItem.classList.remove('active');
+          }, 180);
+        }
+      });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('#navCertCourses') && !e.target.closest('#navPlacementCourses')) {
+        closeAllDropdowns();
+      }
+    });
+
+    // ================= MOBILE DRAWER LOGIC =================
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const drawerBackdrop = document.getElementById('drawerBackdrop');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+
+    function openDrawer() {
+      mobileDrawer.classList.add('open');
+      drawerBackdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+      mobileDrawer.classList.remove('open');
+      drawerBackdrop.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    hamburgerBtn.addEventListener('click', openDrawer);
+    drawerBackdrop.addEventListener('click', closeDrawer);
+    drawerCloseBtn.addEventListener('click', closeDrawer);
+
+    function toggleDrawerAcc(accId) {
+      const el = document.getElementById(accId);
+      if (el) {
+        el.classList.toggle('open');
+      }
+    }
+
+    // ================= LOGIN MODAL LOGIC =================
+    const headerLoginBtn = document.getElementById('headerLoginBtn');
+    const drawerLoginBtn = document.getElementById('drawerLoginBtn');
+    const loginModalBackdrop = document.getElementById('loginModalBackdrop');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+    function openLoginModal() {
+      closeDrawer();
+      closeAllDropdowns();
+      loginModalBackdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => {
+        const emailInput = document.getElementById('modalEmail');
+        if (emailInput) emailInput.focus();
+      }, 100);
+    }
+
+    function closeLoginModal() {
+      loginModalBackdrop.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    headerLoginBtn.addEventListener('click', openLoginModal);
+    drawerLoginBtn.addEventListener('click', openLoginModal);
+    modalCloseBtn.addEventListener('click', closeLoginModal);
+
+    loginModalBackdrop.addEventListener('click', (e) => {
+      if (e.target === loginModalBackdrop) {
+        closeLoginModal();
+      }
+    });
+
+    // Escape key closes modal & drawer & dropdowns
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLoginModal();
+        closeDrawer();
+        closeAllDropdowns();
+      }
+    });
+
+    // ================= FOOTER ACCORDION LOGIC =================
+    function toggleAccordion(headerEl) {
+      if (window.innerWidth <= 991) {
+        const section = headerEl.parentElement;
+        const icon = headerEl.querySelector('.accordion-icon');
+        const isOpen = section.classList.toggle('open');
+        if (icon) {
+          icon.textContent = isOpen ? '−' : '+';
+        }
+      }
+    }
+  </script>
+</body>
+</html>

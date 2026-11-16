@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/verify_certificate/:id", "destination": "/index.html?certificate_number=:id" },
+    { "source": "/verify_certificate", "destination": "/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

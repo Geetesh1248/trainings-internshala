@@ -1,0 +1,3 @@
+/verify_certificate/:id  /index.html?certificate_number=:id  200
+/verify_certificate      /index.html                         200
+/*                       /index.html                         200
